@@ -28,17 +28,14 @@ Part of the [**Off-Grid Community Suite**](https://github.com/Nezugi/Off-Grid-Co
 ## Installation
 
 ```bash
-cp -r warehouse/ ~/.nomadnetwork/storage/pages/warehouse/
+copy files to ~/.nomadnetwork/storage/pages/warehouse/
 chmod +x ~/.nomadnetwork/storage/pages/warehouse/*.mu
 chmod +x ~/.nomadnetwork/storage/pages/warehouse/admin/*.mu
-mkdir -p /home/YOUR_USER/.nomadWarehouse
+
 # edit main.py — set storage_path
 python3 ~/.nomadnetwork/storage/pages/warehouse/create_admin.py
 # restart NomadNet
 ```
-
-> When updating files while NomadNet is running, use atomic swap to avoid "Text file busy":
-> `cp file.mu /tmp/file.mu && mv /tmp/file.mu ~/.nomadnetwork/storage/pages/warehouse/file.mu`
 
 ---
 
