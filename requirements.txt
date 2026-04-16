@@ -1,0 +1,2 @@
+# nomadLager — Keine externen Abhängigkeiten
+# Nur Python-Standardbibliothek: sqlite3, hashlib, secrets, os, sys, datetime
