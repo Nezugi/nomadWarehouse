@@ -11,7 +11,7 @@ m.print_header("Help")
 print(m.nav_bar(user, token))
 print()
 
-print(">About nomadLager")
+print(">About nomadWarehouse")
 print()
 print("A shared inventory system for this community.")
 print("Track stock, manage withdrawals and returns,")

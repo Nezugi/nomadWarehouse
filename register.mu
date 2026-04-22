@@ -41,9 +41,9 @@ if submitted:
 
 print()
 print(">>New Account")
-print(f"Username         `B333`<32|username`>`b")
-print(f"Password         `B333`<!32|password`>`b")
-print(f"Confirm Password `B333`<!32|password2`>`b")
+print(f"Username        `B333`<32|username`>`b")
+print(f"Password        `B333`<!32|password`>`b")
+print(f"Confirm Password`B333`<!32|password2`>`b")
 print()
 print(f"`[Register`{m.page_path}/register.mu`*]")
 print()

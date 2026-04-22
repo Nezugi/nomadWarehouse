@@ -39,7 +39,7 @@ back = f"{m.page_path}/item_detail.mu`id={item_id}|session={token}"
 print(f">{m.site_name} — Reserve Item")
 print(m.nav_bar(user, token, back_url=back))
 
-submitted = action == "reserve" or "field_reserved_from" in os.environ
+submitted = action == "reserve"
 
 if submitted:
     try:
@@ -75,10 +75,10 @@ print()
 print(f">>Reserve: {item['name']}")
 print(f"`F777Current stock:`f  {item['stock']}")
 print()
-print(f"From     `B333`<24|reserved_from`>`b  `F555DD-MM-YYYY`f")
-print(f"Until    `B333`<24|reserved_until`>`b  `F555DD-MM-YYYY`f")
-print(f"Quantity `B333`<8|quantity`1>`b")
-print(f"Note     `B333`<40|notes`>`b")
+print(f"From    `B333`<24|reserved_from`>`b`F555DD-MM-YYYY`f")
+print(f"Until   `B333`<24|reserved_until`>`b`F555DD-MM-YYYY`f")
+print(f"Quantity`B333`<8|quantity`1>`b")
+print(f"Note    `B333`<40|notes`>`b")
 print()
 print(f"`[Reserve`{m.page_path}/reserve.mu`*|action=reserve|id={item_id}|session={token}]")
 m.print_footer()

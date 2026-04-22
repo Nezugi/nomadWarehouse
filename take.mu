@@ -33,7 +33,7 @@ print(m.nav_bar(user, token, back_url=back))
 reserved  = m.get_reserved_qty(item_id)
 available = max(0, item["stock"] - reserved)
 
-submitted = action == "take" or "field_quantity" in os.environ
+submitted = action == "take"
 
 if submitted:
     try:
@@ -99,7 +99,7 @@ if available == 0:
 print()
 
 print(">>Withdrawal")
-print(f"Quantity `B333`<8|quantity`1>`b")
+print(f"Quantity`B333`<8|quantity`1>`b")
 print()
 
 reasons = m.get_take_reasons()
@@ -109,7 +109,7 @@ if reasons:
         print(f"`<^|reason|{r['id']}`> {r['label']}")
     print()
 
-print(f"Note `B333`<40|notes`>`b")
+print(f"Note    `B333`<40|notes`>`b")
 print()
 
 print("Book as loan:")

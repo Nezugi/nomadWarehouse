@@ -38,7 +38,7 @@ open_loan = con.execute("""
 """, (item_id, user["id"])).fetchone()
 con.close()
 
-submitted = action == "store" or "field_quantity" in os.environ
+submitted = action == "store"
 
 if submitted:
     try:
@@ -83,7 +83,7 @@ print(f"Stock:  `F{color}{item['stock']} {item['unit']}`f")
 print()
 
 print(">>Store")
-print(f"Quantity  `B333`<8|quantity`1>`b")
+print(f"Quantity `B333`<8|quantity`1>`b")
 print()
 
 reasons = m.get_store_reasons()
@@ -93,14 +93,14 @@ if reasons:
         print(f"`<^|reason|{r['id']}`> {r['label']}")
     print()
 
-print(f"Source `B333`<40|source`>`b")
+print(f"Source   `B333`<40|source`>`b")
 print()
 
 # Offer loan return if there is an open loan
 if open_loan:
     print(f"`Fca4 You have this item on loan (due {m.fmt_date(open_loan['due_date'])}).`f")
     print(f"`<?|return_loan|yes`> Mark as loan return")
-    print(f"Condition `B333`<40|return_notes`>`b")
+    print(f"Condition`B333`<40|return_notes`>`b")
     print()
 
 print(f"`[Store`{m.page_path}/store.mu`*|action=store|id={item_id}|session={token}]")

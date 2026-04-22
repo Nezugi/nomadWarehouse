@@ -65,7 +65,7 @@ if overdue:
               f"{loan['quantity']}x")
         print()
         # Note field + action links
-        print(f"Note `B333`<40|notes`>`b")
+        print(f"Note`B333`<40|notes`>`b")
         print(f"`[Returned`{m.page_path}/admin/overdue.mu`*|action=returned|lid={loan['id']}|session={token}]"
               f"  "
               f"`[Write Off`{m.page_path}/admin/overdue.mu`*|action=writeoff|lid={loan['id']}|session={token}]")

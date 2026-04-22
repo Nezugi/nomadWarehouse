@@ -30,7 +30,7 @@ print(m.nav_bar(user, token, back_url=f"{m.page_path}/index.mu`session={token}")
 # Search bar
 print()
 print(">>Search")
-print(f"Term `B333`<40|q`>`b")
+print(f"Term`B333`<40|q`>`b")
 if cat:
     print(f"`[Search`{m.page_path}/inventory.mu`*|cat={cat_id}|session={token}]")
 else:

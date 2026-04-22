@@ -57,6 +57,6 @@ for row in by_cat:
 # ── Search ────────────────────────────────────
 print()
 print(">>Search")
-print(f"Term `B333`<40|q`>`b")
+print(f"Term`B333`<40|q`>`b")
 print(f"`[Search`{m.page_path}/inventory.mu`*|session={token}]")
 m.print_footer()

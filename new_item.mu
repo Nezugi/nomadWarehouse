@@ -33,7 +33,7 @@ back = f"{m.page_path}/inventory.mu`cat={cat_id}|session={token}"
 print(f">{m.site_name} — Create Item")
 print(m.nav_bar(user, token, back_url=back))
 
-submitted = action == "save" or "field_name" in os.environ
+submitted = action == "save"
 
 if submitted:
     try:
@@ -99,14 +99,14 @@ if item_types:
     print()
 
 print(">>Item Data")
-print(f"Name           `B333`<40|name`>`b")
-print(f"Item Number    `B333`<32|number`>`b")
-print(f"Unit           `B333`<20|unit`Units>`b")
-print(f"Location       `B333`<40|location`{defaults['location']}>`b")
-print(f"Description    `B333`<40|desc`>`b")
-print(f"Value (EUR)    `B333`<16|value`0.00>`b")
-print(f"Initial Stock  `B333`<8|stock`0>`b")
-print(f"Min Stock      `B333`<8|min_stock`{defaults['min_stock']}>`b")
+print(f"Name         `B333`<40|name`>`b")
+print(f"Item Number  `B333`<32|number`>`b")
+print(f"Unit         `B333`<20|unit`Units>`b")
+print(f"Location     `B333`<40|location`{defaults['location']}>`b")
+print(f"Description  `B333`<40|desc`>`b")
+print(f"Value (EUR)  `B333`<16|value`0.00>`b")
+print(f"Initial Stock`B333`<8|stock`0>`b")
+print(f"Min Stock    `B333`<8|min_stock`{defaults['min_stock']}>`b")
 print()
 
 # Type selection via radio buttons
@@ -117,5 +117,5 @@ if item_types:
         print(f"`<^|item_type|{t['id']}`> {t['name']}")
     print()
 
-print(f"`[Create`{m.page_path}/new_item.mu`*|action=save|cat={cat_id}|session={token}]")
+print(f"`[Create Item`{m.page_path}/new_item.mu`*|action=save|cat={cat_id}|session={token}]")
 m.print_footer()

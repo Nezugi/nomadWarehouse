@@ -32,17 +32,18 @@ if submitted:
         exit()
     except ValueError as e:
         print(f">{m.site_name} — Login")
+        print(m.nav_bar(None))
         m.error(str(e))
 else:
     print(f">{m.site_name} — Login")
+    print(m.nav_bar(None))
 
 print()
 print(">>Login")
-print(f"Username `B333`<32|username`>`b")
-print(f"Password     `B333`<!32|password`>`b")
+print(f"Username`B333`<32|username`>`b")
+print(f"Password`B333`<!32|password`>`b")
 print()
 print(f"`[Sign In`{m.page_path}/login.mu`*|action=login]")
 print()
 print(f"`F777No account yet?`f  `[Register`{m.page_path}/register.mu]")
-print(m.nav_bar(None))
 m.print_footer()

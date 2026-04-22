@@ -30,7 +30,7 @@ back = f"{m.page_path}/item_detail.mu`id={item_id}|session={token}"
 print(f">{m.site_name} — Edit Item")
 print(m.nav_bar(user, token, back_url=back))
 
-submitted = action == "save" or "field_name" in os.environ
+submitted = action == "save"
 
 if submitted:
     try:
@@ -71,13 +71,13 @@ item_types = m.get_item_types()
 print()
 print(f">>Item: {item['name']}")
 print()
-print(f"Name          `B333`<40|name`{item['name']}>`b")
-print(f"Item Number   `B333`<32|number`{item['item_number']}>`b")
-print(f"Unit          `B333`<20|unit`{item['unit'] or 'Units'}>`b")
-print(f"Location      `B333`<40|location`{item['location']}>`b")
-print(f"Description   `B333`<40|desc`{item['description']}>`b")
-print(f"Value (EUR)   `B333`<16|value`{item['value']:.2f}>`b")
-print(f"Min Stock     `B333`<8|min_stock`{item['min_stock']}>`b")
+print(f"Name       `B333`<40|name`{item['name']}>`b")
+print(f"Item Number`B333`<32|number`{item['item_number']}>`b")
+print(f"Unit       `B333`<20|unit`{item['unit'] or 'Units'}>`b")
+print(f"Location   `B333`<40|location`{item['location']}>`b")
+print(f"Description`B333`<40|desc`{item['description']}>`b")
+print(f"Value (EUR)`B333`<16|value`{item['value']:.2f}>`b")
+print(f"Min Stock  `B333`<8|min_stock`{item['min_stock']}>`b")
 print()
 
 if item_types:

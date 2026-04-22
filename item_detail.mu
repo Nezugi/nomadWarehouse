@@ -30,7 +30,9 @@ print(f">{m.site_name} — {item['name']}")
 print(m.nav_bar(user, token, back_url=back))
 
 # ── Header ───────────────────────────────────
-color = m.stock_color(item["stock"], item["min_stock"])
+color    = m.stock_color(item["stock"], item["min_stock"])
+reserved = m.get_reserved_qty(item_id)
+available = max(0, item["stock"] - reserved)
 print()
 print(f"`!{item['name']}`!")
 if item["item_number"]:
@@ -46,6 +48,8 @@ if item["min_stock"] > 0:
     print(f"  `F555(Min: {item['min_stock']})`f")
 else:
     print()
+if reserved > 0:
+    print(f"`F777Reserved:`f  `Fca4{reserved} {item['unit']}`f  `F777Available:`f  {available} {item['unit']}")
 if item["description"]:
     print()
     print(f"{item['description']}")
